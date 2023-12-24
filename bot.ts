@@ -1,6 +1,6 @@
 import { CronJob } from 'cron'
 import dotenv from 'dotenv-safe'
-import { Client, IntentsBitField } from 'discord.js';
+import { Client, IntentsBitField, ChannelType } from 'discord.js';
 
 dotenv.config({
     example: './.env.example'
@@ -64,7 +64,11 @@ function containsCIA(str: string): boolean {
 }
 
 client.once('ready', () => {
-   console.log('Bot is online!');
+    console.log('Bot is online!');
+    const channel = client.channels.cache.get(process.env.HOME_CHANNEL_ID ?? '')
+    if (channel && channel.type === ChannelType.GuildText) {
+        channel.send('I just restarted.')
+    }
 });
 
 client.on('error', console.error)

@@ -21,6 +21,12 @@ jobs:
     - name: Install npm dependencies
       run: npm install
 
+    - name: Create .env file
+      run: |
+        echo "TOKEN=${{ secrets.TOKEN }}" >> .env
+        echo "HOME_CHANNEL_ID=${{ secrets.TOKEN }}" >> .env
+      shell: bash
+
     - name: Stop existing PM2 process
       run: pm2 delete terry-davis-discord-bot || true
 
