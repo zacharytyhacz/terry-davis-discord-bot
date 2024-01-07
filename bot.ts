@@ -6,7 +6,6 @@ dotenv.config({
     example: './.env.example'
 })
 
-
 const client = new Client({
     intents: [
         IntentsBitField.Flags.Guilds,
@@ -14,6 +13,7 @@ const client = new Client({
         IntentsBitField.Flags.MessageContent
     ]
 });
+
 const token = process.env.TOKEN;
 
 const replies = [
@@ -80,6 +80,19 @@ client.once('ready', () => {
 client.on('error', console.error)
 client.on('shardError', console.error)
 
+const meetupReply = `Check out the meetup page here: https://www.meetup.com/js-developers-of-wilmington/
+
+Our next meetup is on **February 7th, 7:00pm at 1608 Queen Street ( Coworx )**
+
+For directions: https://maps.app.goo.gl/bmrPyXFLDM18tAxA8
+
+We're going to have a SHOW-N-TELL of your side projects, games, ideas, and stuff you're building! 😎
+- Drinks and conversations until about 7:30pm 🍹
+- Ice breakers to introduce new people and the usual folks  🧊
+- Our informal, unprofessional, and casual presentations will start. No formal presentations or preparations needed, just get up there and show us something you're building.
+- At around 8:45pm, we'll continue the conversations and get back to pizza and drinks 🍕
+`
+
 let lastChannelId = ''
 client.on('messageCreate', message => {
    if (message.content === '!terry') {
@@ -88,7 +101,7 @@ client.on('messageCreate', message => {
    }
 
    if (message.content === '!meetup') {
-       message.channel.send('Check out the meetup page here: https://www.meetup.com/js-developers-of-wilmington/')
+       message.channel.send(meetupReply)
    }
 
    if (containsCIA(message.content)) {
@@ -123,18 +136,7 @@ const startWeeklyMeetupLink = (): CronJob => new CronJob(
         const channel = client.channels.cache.get(lastChannelId);
         
         if (channel) {
-            (channel as any).send(`Check out the meetup page here: https://www.meetup.com/js-developers-of-wilmington/
-
-Our next meetup is on **February 7th, 7:00pm at 1608 Queen Street ( Coworx )**
-
-For directions: https://maps.app.goo.gl/bmrPyXFLDM18tAxA8
-
-We're going to have a SHOW-N-TELL of your side projects, games, ideas, and stuff you're building! 😎
-- Drinks and conversations until about 7:30pm 🍹
-- Ice breakers to introduce new people and the usual folks  🧊
-- Our informal, unprofessional, and casual presentations will start. No formal presentations or preparations needed, just get up there and show us something you're building.
-- At around 8:45pm, we'll continue the conversations and get back to pizza and drinks 🍕
-`)
+            (channel as any).send(meetupReply)
         } else {
             console.log('Channel not found or the bot does not have access to it.');
         }
