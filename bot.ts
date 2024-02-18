@@ -80,17 +80,16 @@ client.once('ready', () => {
 client.on('error', console.error)
 client.on('shardError', console.error)
 
-const meetupReply = `Check out the meetup page here: https://www.meetup.com/js-developers-of-wilmington/
+const meetupReply = `
+Next meetup event will be **March 7th, THURSDAY at the 273 N Front Street** at the Cape Fear Maker's Guild for a fun collab meetup.
 
-Our next meetup is on **February 7th, 7:00pm at 1608 Queen Street ( Coworx )**
+3D printers, laser printers, wood making tools, electrical hardware, potato launchers, programming, and more. All things technologists love.
 
-For directions: https://maps.app.goo.gl/bmrPyXFLDM18tAxA8
+6:30 - :ice_cube:  Come on in! Get settled in, talk and walk around a bit before we start
+7:00 - :robot:  Doug will introduce everyone to the maker's guild, talk about their events, space, and memberships and more.
+7:45~8:00 - :pizza: We will head to MELLOW MUSHROOM for some drinks and food to finish out the night!
 
-We're going to have a SHOW-N-TELL of your side projects, games, ideas, and stuff you're building! 😎
-- Drinks and conversations until about 7:30pm 🍹
-- Ice breakers to introduce new people and the usual folks  🧊
-- Our informal, unprofessional, and casual presentations will start. No formal presentations or preparations needed, just get up there and show us something you're building.
-- At around 8:45pm, we'll continue the conversations and get back to pizza and drinks 🍕
+https://www.meetup.com/js-developers-of-wilmington/events/299126131
 `
 
 let lastChannelId = ''
