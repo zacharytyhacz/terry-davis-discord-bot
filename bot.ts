@@ -81,15 +81,15 @@ client.on('error', console.error)
 client.on('shardError', console.error)
 
 const meetupReply = `
-Next meetup event will be **March 7th, THURSDAY at the 273 N Front Street** at the Cape Fear Maker's Guild for a fun collab meetup.
+Next meetup event will be **April 3rd, WEDNESDAY at 1608 Queen St ( CoWorx )**
 
-3D printers, laser printers, wood making tools, electrical hardware, potato launchers, programming, and more. All things technologists love.
+We're going to have our usual agenda of conversation, drinks, pizza, and ice breakers ------- but we're going to share our side projects!
 
-6:30 - :ice_cube:  Come on in! Get settled in, talk and walk around a bit before we start
-7:00 - :robot:  Doug will introduce everyone to the maker's guild, talk about their events, space, and memberships and more.
-7:45~8:00 - :pizza: We will head to MELLOW MUSHROOM for some drinks and food to finish out the night!
+Are you working on anything new? A new game? A new design? Some drawing art? A raspberry-pi setup? A new desktop setup? Hosted your own game server? Let's talk about
 
-https://www.meetup.com/js-developers-of-wilmington/events/299126131
+Your 'presentation' does not have to be fancy or high quality; you can be casual and informal with it - but do try to keep it interesting for your audience!
+
+https://www.meetup.com/js-developers-of-wilmington/events/299126162/
 `
 
 let lastChannelId = ''
@@ -109,24 +109,6 @@ client.on('messageCreate', message => {
 });
 
 client.login(token);
-
-const dailyRandomMessage = (): CronJob => new CronJob(
-    '0 0 19 * * *',
-    () => {
-        // Fetch the channel using the saved channel ID
-        const channel = client.channels.cache.get(lastChannelId);
-        
-        if (channel) {
-            (channel as any).send(getRandomReply());
-        } else {
-            console.log('Channel not found or the bot does not have access to it.');
-        }
-    },
-    null,
-    true
-)
-
-dailyRandomMessage()
 
 const startWeeklyMeetupLink = (): CronJob => new CronJob(
     '0 0 12 * * 0',
