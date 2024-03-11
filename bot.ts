@@ -66,7 +66,7 @@ function getRandomReply(): string {
 }
 
 function containsCIA(str: string): boolean {
-   return /cia/i.test(str);
+   return /\bCIA\b/i.test(str);
 }
 
 client.once('ready', () => {
