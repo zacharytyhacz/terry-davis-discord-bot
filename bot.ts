@@ -57,7 +57,7 @@ client.on('messageCreate', message => {
 client.login(token)
 
 const startWeeklyMeetupLink = (): CronJob => new CronJob(
-    '0 12 12 * * 2,5', // tuesday and friday at 12:00 PM
+    '0 14 12 * * 2,5', // tuesday and friday at 12:00 PM
     () => {
         console.log('Running cronjob....')
         // Fetch the channel using the saved channel ID
