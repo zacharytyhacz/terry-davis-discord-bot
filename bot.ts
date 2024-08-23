@@ -33,12 +33,19 @@ client.once('ready', () => {
     console.log('Bot is online!');
     const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
     if (channel && channel.isTextBased()) {
-        channel.send('I just restarted.')
+        // channel.send('I just restarted.')
     }
 });
 
-client.on('error', console.error)
-client.on('shardError', console.error)
+client.on('error', (err) => {
+    const now = new Date()
+    console.error(now.toLocaleDateString(), 'Got error', err)
+})
+
+client.on('shardError', (err) => {
+    const now = new Date()
+    console.error(now.toLocaleDateString(), 'Got shared error', err)
+})
 
 client.on('messageCreate', message => {
    if (message.content === '!terry') {
@@ -57,7 +64,7 @@ client.on('messageCreate', message => {
 client.login(token)
 
 const startWeeklyMeetupLink = (): CronJob => new CronJob(
-    '0 14 12 * * 2,5', // tuesday and friday at 12:00 PM
+    '0 14 12 * * 2,5', // Every Tuesday and Friday at 12:14 PM
     () => {
         console.log('Running cronjob....')
         // Fetch the channel using the saved channel ID
