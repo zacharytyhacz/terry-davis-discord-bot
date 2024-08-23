@@ -27,9 +27,5 @@ jobs:
         echo "HOME_CHANNEL_ID=${{ secrets.TOKEN }}" >> .env
       shell: bash
 
-    - name: Stop existing PM2 process
-      run: pm2 delete terry-davis-discord-bot || true
-
-    - name: Start application with PM2
-      run: pm2 start npm --name "terry-davis-discord-bot" -- run start
-
+    - name: Restart pm2 process
+      run: pm2 restart terry-davis-discord-bot
