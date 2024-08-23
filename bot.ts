@@ -39,7 +39,7 @@ client.once('ready', () => {
 
     console.log('time now is:', new Date().toLocaleTimeString())
     new CronJob(
-        '0 28 12 * * 2,5', // Every Tuesday and Friday at 12:14 PM
+        '0 29 11 * * 2,5', // Every Tuesday and Friday at 12:14 PM
         () => {
             console.log('Running cronjob....')
             // Fetch the channel using the saved channel ID
