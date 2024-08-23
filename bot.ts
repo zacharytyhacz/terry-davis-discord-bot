@@ -20,6 +20,11 @@ const client = new Client({
 
 const token = process.env.TOKEN;
 
+async function cleanUp() {
+    console.log('Shutting down...')
+    await client.destroy()
+}
+
 function getRandomReply(): string {
     const randomIndex = Math.floor(Math.random() * replies.length);
     return replies[randomIndex];
@@ -65,11 +70,13 @@ ${engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]}
 client.on('error', (err) => {
     const now = new Date()
     console.error(now.toLocaleDateString(), 'Got error', err)
+    cleanUp()
 })
 
 client.on('shardError', (err) => {
     const now = new Date()
     console.error(now.toLocaleDateString(), 'Got shared error', err)
+    cleanUp()
 })
 
 client.on('messageCreate', message => {
@@ -87,3 +94,9 @@ client.on('messageCreate', message => {
 });
 
 client.login(token)
+
+process.on('SIGINT', cleanUp)
+process.on('SIGTERM', cleanUp)
+process.on('uncaughtException', cleanUp)
+process.on('unhandledRejection', cleanUp)
+process.on('exit', cleanUp)
