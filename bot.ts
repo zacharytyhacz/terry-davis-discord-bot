@@ -57,12 +57,14 @@ client.on('messageCreate', message => {
 client.login(token)
 
 const startWeeklyMeetupLink = (): CronJob => new CronJob(
-    '0 8 12 * * 2,5', // tuesday and friday at 12:00 PM
+    '0 12 12 * * 2,5', // tuesday and friday at 12:00 PM
     () => {
+        console.log('Running cronjob....')
         // Fetch the channel using the saved channel ID
         const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
         
         if (channel && channel.isTextBased()) {
+            console.log('Channel found. Sending message...')
             channel.send(`
 Hey guys
 
