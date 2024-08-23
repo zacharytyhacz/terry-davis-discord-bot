@@ -31,8 +31,8 @@ function containsCIA(str: string): boolean {
 
 client.once('ready', () => {
     console.log('Bot is online!');
-    const channel = client.channels.cache.get(process.env.HOME_CHANNEL_ID ?? '')
-    if (channel && channel.type === ChannelType.GuildText) {
+    const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
+    if (channel && channel.isTextBased()) {
         channel.send('I just restarted.')
     }
 });
@@ -62,8 +62,8 @@ const startWeeklyMeetupLink = (): CronJob => new CronJob(
         // Fetch the channel using the saved channel ID
         const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
         
-        if (channel) {
-            (channel as any).send(`
+        if (channel && channel.isTextBased()) {
+            channel.send(`
 Hey guys
 
 ${engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]}
