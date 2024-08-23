@@ -32,9 +32,34 @@ function containsCIA(str: string): boolean {
 client.once('ready', () => {
     console.log('Bot is online!');
     const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
+
     if (channel && channel.isTextBased()) {
         // channel.send('I just restarted.')
     }
+
+    console.log('time now is:', new Date().toLocaleTimeString())
+    new CronJob(
+        '0 28 12 * * 2,5', // Every Tuesday and Friday at 12:14 PM
+        () => {
+            console.log('Running cronjob....')
+            // Fetch the channel using the saved channel ID
+            const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
+            
+            if (channel && channel.isTextBased()) {
+                console.log('Channel found. Sending message...')
+                channel.send(`
+Hey guys
+
+${engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]}
+                    `.trim()
+                )
+            } else {
+                console.log('Channel not found or the bot does not have access to it.');
+            }
+        },
+        null,
+        true
+    )
 });
 
 client.on('error', (err) => {
@@ -62,28 +87,3 @@ client.on('messageCreate', message => {
 });
 
 client.login(token)
-
-const startWeeklyMeetupLink = (): CronJob => new CronJob(
-    '0 23 12 * * 2,5', // Every Tuesday and Friday at 12:14 PM
-    () => {
-        console.log('Running cronjob....')
-        // Fetch the channel using the saved channel ID
-        const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
-        
-        if (channel && channel.isTextBased()) {
-            console.log('Channel found. Sending message...')
-            channel.send(`
-Hey guys
-
-${engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]}
-                `.trim()
-            )
-        } else {
-            console.log('Channel not found or the bot does not have access to it.');
-        }
-    },
-    null,
-    true
-)
-
-startWeeklyMeetupLink()
