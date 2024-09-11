@@ -1,6 +1,6 @@
 import { CronJob } from 'cron'
 import dotenv from 'dotenv-safe'
-import { Client, IntentsBitField, ChannelType } from 'discord.js';
+import { Client, Events, IntentsBitField } from 'discord.js';
 import { replies } from './messages/replies'
 import { engagementQuestions } from './messages/engagement'
 
@@ -20,11 +20,6 @@ const client = new Client({
 
 const token = process.env.TOKEN;
 
-async function cleanUp() {
-    console.log('Shutting down...')
-    await client.destroy()
-}
-
 function getRandomReply(): string {
     const randomIndex = Math.floor(Math.random() * replies.length);
     return replies[randomIndex];
@@ -34,7 +29,7 @@ function containsCIA(str: string): boolean {
    return /\bCIA\b/i.test(str);
 }
 
-client.once('ready', () => {
+client.once(Events.ClientReady, () => {
     console.log('Bot is online!');
     const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
 
@@ -44,7 +39,7 @@ client.once('ready', () => {
 
     console.log('time now is:', new Date().toLocaleTimeString())
     new CronJob(
-        '0 29 11 * * 2,5', // Every Tuesday and Friday at 12:14 PM
+        '0 29 11 * * 2,5', // Every Tuesday and Friday at 11:29 AM ( CST )
         () => {
             console.log('Running cronjob....')
             // Fetch the channel using the saved channel ID
@@ -67,19 +62,17 @@ ${engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]}
     )
 });
 
-client.on('error', (err) => {
+client.on(Events.Error, (err) => {
     const now = new Date()
     console.error(now.toLocaleDateString(), 'Got error', err)
-    cleanUp()
 })
 
-client.on('shardError', (err) => {
+client.on(Events.ShardError, (err) => {
     const now = new Date()
     console.error(now.toLocaleDateString(), 'Got shared error', err)
-    cleanUp()
 })
 
-client.on('messageCreate', message => {
+client.on(Events.MessageCreate, message => {
    if (message.content === '!terry') {
        message.channel.send(getRandomReply());
    }
@@ -94,9 +87,3 @@ client.on('messageCreate', message => {
 });
 
 client.login(token)
-
-process.on('SIGINT', cleanUp)
-process.on('SIGTERM', cleanUp)
-process.on('uncaughtException', cleanUp)
-process.on('unhandledRejection', cleanUp)
-process.on('exit', cleanUp)
