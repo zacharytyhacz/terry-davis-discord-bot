@@ -35,22 +35,7 @@ client.once(Events.ClientReady, async () => {
     const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
 
     if (channel && channel.isTextBased()) {
-      const { question, answers } = engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]
-
-      const message = await channel.send(`
-Hey guys, I am testing this:
-
-${question}
-
-${answers.map((answer, index) => `${reactionEmojis[index]} ${answer}`).join('\n')}
-
-Dont see your answer? Share with us!
-                    `.trim()
-      )
-
-      for (const reaction of reactionEmojis) {
-          await message.react(reaction)
-      }
+      await channel.send(getRandomReply());
     }
 
     console.log('time now is:', new Date().toLocaleTimeString())
