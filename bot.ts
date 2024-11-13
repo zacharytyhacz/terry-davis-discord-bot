@@ -29,30 +29,55 @@ function containsCIA(str: string): boolean {
    return /\bCIA\b/i.test(str);
 }
 
-client.once(Events.ClientReady, () => {
+const reactionEmojis = ['🇦', '🇧', '🇨', '🇩']
+client.once(Events.ClientReady, async () => {
     console.log('Bot is online!');
     const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
 
     if (channel && channel.isTextBased()) {
-        // channel.send('I just restarted.')
+      const { question, answers } = engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]
+
+      const message = await channel.send(`
+Hey guys, I am testing this:
+
+${question}
+
+${answers.map((answer, index) => `${reactionEmojis[index]} ${answer}`).join('\n')}
+
+Dont see your answer? Share with us!
+                    `.trim()
+      )
+
+      for (const reaction of reactionEmojis) {
+          await message.react(reaction)
+      }
     }
 
     console.log('time now is:', new Date().toLocaleTimeString())
+
     new CronJob(
         '0 29 18 * * 2,4,6', // Every Tuesday, Thursday, and Saturday at 6:29 PM CST
-        () => {
+        async () => {
             console.log('Running cronjob....')
             // Fetch the channel using the saved channel ID
             const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
             
             if (channel && channel.isTextBased()) {
                 console.log('Channel found. Sending message...')
-                channel.send(`
-Hey guys
+                const { question, answers } = engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]
+                const message = await channel.send(`
+Hey guys!
 
-${engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]}
+${question}
+
+${answers.map((answer, index) => `${reactionEmojis[index]} ${answer}`).join('\n')}
+
+Dont see your answer? Share with us!
                     `.trim()
                 )
+                for (const reaction of reactionEmojis) {
+                    await message.react(reaction)
+                }
             } else {
                 console.log('Channel not found or the bot does not have access to it.');
             }

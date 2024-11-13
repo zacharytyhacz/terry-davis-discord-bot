@@ -1,97 +1,118 @@
 export const engagementQuestions = [
-  "💻 What’s the most exciting piece of tech you’ve seen recently, and why is it so revolutionary?",
-  "🎨 Designers: How do you approach creating a color palette for a new project? Any go-to tools?",
-  "🔧 Devs, what's your favorite 'trick' or shortcut that makes your workflow more efficient?",
-  "👾 What was the last bug you encountered that made you question your life choices? How did you solve it?",
-  "📱 Mobile devs, what’s a common UX mistake you see in apps that drives you crazy? How would you fix it?",
-  "💡 What’s your most controversial tech opinion that you’re willing to defend with passion? 😅",
-  "🖥️ What’s the most powerful design tool that isn’t mainstream yet but should be?",
-  "🛠️ Programmers, which language do you think is the most overrated? Why?",
-  "🎯 What’s your personal philosophy on balancing creativity and functionality in your work?",
-  "🚀 Have you ever created something that you thought was simple but ended up being surprisingly complex? Tell us about it!",
-  "📦 What’s your go-to approach for structuring a complex project, whether it's in code or design?",
-  "🔮 What’s a tech trend you're keeping an eye on, and how do you think it will change the industry?",
-  "📱 For app developers, how do you handle cross-platform design challenges? Do you prioritize one platform over another?",
-  "🌈 Designers, how do you handle conflicting feedback from clients or teammates regarding creative choices?",
-  "🛠️ Coders: Which tool or IDE feature do you wish more people knew about? Why is it a game changer?",
-  "🎨 What’s the most misunderstood aspect of web design in your opinion?",
-  "💻 Devs, what's your favorite browser extension that you can't live without? 🚀",
-  "🧑‍💻 What’s the one coding convention or best practice you follow religiously? Why?",
-  "📲 How do you handle app updates that might break existing functionality? What’s your process?",
-  "💥 What’s the biggest tech disaster you’ve experienced and how did you recover from it?",
-  "🤖 Are you excited or worried about AI's impact on your field? How do you think it will change the way you work?",
-  "📐 How do you keep your designs consistent across different screen sizes or devices?",
-  "💡 Designers, what’s your thought process when creating a completely new brand from scratch?",
-  "🚧 What’s the hardest coding problem you’ve ever faced and how did you tackle it?",
-  "💼 Freelancers, what’s your strategy for managing client expectations when they don’t align with technical realities?",
-  "🎉 What's a project you're particularly proud of? What made it stand out?",
-  "📲 What are the most essential mobile app features that are often overlooked during development?",
-  "🌍 Do you think web accessibility is properly addressed in most projects? How do you ensure compliance?",
-  "🎮 Gamers, what’s the most challenging game mechanic you've ever programmed or designed?",
-  "🔌 What’s a software tool that has improved your productivity the most in the past year?",
-  "🎨 Designers, how do you get unstuck when you're facing creative block?",
-  "💻 Programmers, how do you approach debugging an issue you can’t initially figure out?",
-  "🖼️ How do you find inspiration for your UI/UX designs when you're feeling stuck?",
-  "📚 Developers, what's your go-to resource when you're learning a new technology or framework?",
-  "💻 What’s a programming language that you think is underrated but incredibly powerful?",
-  "🎨 For designers, what’s the biggest misconception non-designers have about your work?",
-  "👨‍💻 What's a coding challenge you recently faced that made you rethink how you approach certain problems?",
-  "📱 App devs, how do you test your apps across different devices? Any tools or techniques you recommend?",
-  "🛠️ Developers, what's your secret to managing technical debt in a long-running project?",
-  "🎯 How do you balance the need for perfectionism with deadlines and practical constraints in design or development?",
-  "🔒 What’s your take on the current state of security in web development? Any best practices you swear by?",
-  "📈 Devs, what's the biggest performance issue you've tackled and how did you optimize it?",
-  "🖼️ For designers, how do you prioritize user feedback while maintaining your creative vision?",
-  "🧑‍💻 What’s your process for choosing the right stack for a new project?",
-  "🚨 Have you ever implemented a feature that broke something in production? How did you handle the fallout?",
-  "🎨 What’s your favorite design trend right now, and what do you think will be the next big thing?",
-  "🧩 Programmers, what's the most difficult algorithm or data structure you've had to implement?",
-  "📲 Mobile devs, how do you manage app performance on low-end devices?",
-  "⚙️ What’s a tool or service you couldn't live without for managing remote work?",
-  "🖥️ How do you manage system resources efficiently for a performance-heavy app or game?",
-  "💡 How do you stay up-to-date with the latest technologies without feeling overwhelmed?",
-  "🔧 What’s a refactoring horror story you’ve lived through? Did it pay off in the end?",
-  "🎯 What’s your strategy for managing a tight deadline on a project that keeps growing in scope?",
-  "💼 For freelancers, what’s the toughest client feedback you've received and how did you handle it?",
-  "📲 For mobile developers, how do you manage battery consumption for your apps?",
-  "💻 What’s a non-coding skill every programmer or designer should have? How has it helped you?",
-  "🎨 Designers, how do you balance aesthetics with functionality when they seem to clash?",
-  "⚖️ Do you prefer working with a team or solo? How do your strategies change depending on the setup?",
-  "🔍 What debugging tools or techniques have saved you the most time during development?",
-  "🔮 In the next 5 years, what do you think will be the most significant change in web or app development?",
-  "📦 What's a software architecture pattern you've found to be the most scalable in your experience?",
-  "🌍 How do you ensure internationalization/localization doesn't break your designs or code?",
-  "🖥️ How do you handle browser compatibility issues while developing a web app?",
-  "👾 For game developers, what's the most fun mechanic you've implemented?",
-  "📈 What's the most complex animation you've implemented on a web or mobile app? How did you do it?",
-  "💡 What's your thought process when faced with a project where you know you'll be learning as you go?",
-  "🎨 How do you balance client requests with your own vision for a project?",
-  "💻 What's your workflow like for debugging in production environments?",
-  "🧠 How do you mentally approach a long-term project versus a short-term one?",
-  "📱 Mobile devs, how do you prioritize features when you’re working with limited resources or time?",
-  "🔮 What's your prediction for the future of no-code/low-code tools? Will they replace traditional development?",
-  "🛠️ Programmers, what's the one thing you wish every beginner knew before they started coding?",
-  "🎨 What's the hardest part of collaborating with developers as a designer? Any tips for improving the workflow?",
-  "📊 How do you handle project scope creep when working with clients or stakeholders?",
-  "🚧 What's the most unusual or complex bug you've encountered, and how did you solve it?",
-  "🎮 What’s the biggest challenge you’ve faced when optimizing a game’s performance?",
-  "🎨 Designers, how do you stay inspired when working on repetitive tasks?",
-  "🔧 Developers, what's your favorite testing strategy for ensuring a robust and bug-free product?",
-  "🚀 How do you keep your codebase maintainable as your project scales in size?",
-  "📱 For app developers, what's the hardest part about keeping apps performant as features are added?",
-  "🌐 How do you handle cross-browser compatibility issues in modern web development?",
-  "🖼️ How do you decide when to stop refining a design and just ship it?",
-  "⚙️ How do you handle integrating third-party services in your projects without making your codebase messy?",
-  "🔗 What's your approach for handling API changes in production apps?",
-  "🎨 How do you handle feedback that you strongly disagree with when working on a design project?",
-  "📱 For mobile devs, how do you handle feature requests that might negatively impact user experience?",
-  "🖥️ What's the most annoying optimization challenge you've dealt with, and how did you tackle it?",
-  "🚀 What’s the most impressive performance gain you’ve managed to achieve in a project?",
-  "🎨 Designers, how do you handle scope changes mid-project without losing your creative direction?",
-  "🔧 What's the most underrated tool or library in your development toolkit?",
-  "📲 How do you ensure a smooth user experience when handling large datasets in mobile apps?",
-  "💡 What's your strategy for learning new frameworks or tools when you're under a deadline?",
-  "🚧 What's the hardest trade-off you've made in the name of performance optimization?",
-  "🎮 Game devs, what's the hardest balancing act you’ve faced when designing gameplay mechanics?",
-  "🛠️ What's your strategy for handling breaking changes in third-party libraries or APIs?"
+  {
+    question: "What's the best programming language for beginners?",
+    answers: ["Python", "JavaScript", "C#", "Ruby"]
+  },
+  {
+    question: "Which text editor do you prefer?",
+    answers: ["VS Code", "Sublime Text", "Vim", "Notepad++"]
+  },
+  {
+    question: "What's the best Linux distro for development?",
+    answers: ["Ubuntu", "Fedora", "Arch", "Debian"]
+  },
+  {
+    question: "What’s the best database?",
+    answers: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"]
+  },
+  {
+    question: "What’s the worst programming paradigm?",
+    answers: ["Object-Oriented", "Functional", "Procedural", "Declarative"]
+  },
+  {
+    question: "Which do you prefer for backend development?",
+    answers: ["Node.js", "Django", "Laravel", "Spring Boot"]
+  },
+  {
+    question: "What's your favorite frontend library?",
+    answers: ["React", "Vue", "Svelte", "Angular"]
+  },
+  {
+    question: "Which CSS framework is your go-to?",
+    answers: ["Bootstrap", "Tailwind", "Foundation", "Bulma"]
+  },
+  {
+    question: "What's the best source control platform?",
+    answers: ["GitHub", "GitLab", "Bitbucket", "Azure DevOps"]
+  },
+  {
+    question: "What’s the most frustrating programming bug?",
+    answers: ["Off-by-one errors", "Null pointer exceptions", "Memory leaks", "Concurrency issues"]
+  },
+  {
+    question: "What's your favorite web hosting provider?",
+    answers: ["AWS", "DigitalOcean", "Netlify", "Vercel"]
+  },
+  {
+    question: "Which terminal emulator is the best?",
+    answers: ["iTerm", "Terminator", "Alacritty", "Windows Terminal"]
+  },
+  {
+    question: "What’s the best tool for team communication?",
+    answers: ["Slack", "Discord", "Microsoft Teams", "Google Chat"]
+  },
+  {
+    question: "What's the most secure programming language?",
+    answers: ["Rust", "C#", "Go", "Python"]
+  },
+  {
+    question: "What's your favorite design tool?",
+    answers: ["Figma", "Adobe XD", "Sketch", "Canva"]
+  },
+  {
+    question: "Which deployment method do you prefer?",
+    answers: ["Containers", "Serverless", "Bare-metal servers", "Virtual machines"]
+  },
+  {
+    question: "What’s the most dreaded software?",
+    answers: ["JIRA", "SharePoint", "Lotus Notes", "Microsoft Access"]
+  },
+  {
+    question: "What's the best tool for debugging?",
+    answers: ["Chrome DevTools", "Postman", "PyCharm Debugger", "VS Code Debugger"]
+  },
+  {
+    question: "What’s your preferred shell?",
+    answers: ["Bash", "Zsh", "Fish", "PowerShell"]
+  },
+  {
+    question: "What’s the best type of monitor setup?",
+    answers: ["Single Ultrawide", "Dual Monitors", "Triple Monitors", "Laptop Screen Only"]
+  },
+  {
+    question: "What's the most important part of cybersecurity?",
+    answers: ["Password management", "Encryption", "Patch management", "User education"]
+  },
+  {
+    question: "What’s your favorite CI/CD tool?",
+    answers: ["GitHub Actions", "Jenkins", "GitLab CI", "CircleCI"]
+  },
+  {
+    question: "Which operating system do you prefer for coding?",
+    answers: ["Linux", "macOS", "Windows", "BSD"]
+  },
+  {
+    question: "What’s your preferred method of learning new skills?",
+    answers: ["Documentation", "Online Courses", "Hands-on Projects", "Books"]
+  },
+  {
+    question: "What’s your favorite type of testing?",
+    answers: ["Unit Testing", "Integration Testing", "End-to-End Testing", "Manual Testing"]
+  },
+  {
+    question: "What’s your favorite cloud provider?",
+    answers: ["AWS", "Azure", "Google Cloud", "Linode"]
+  },
+  {
+    question: "What’s the hardest part of web development?",
+    answers: ["Accessibility", "Performance", "Responsive Design", "Cross-Browser Compatibility"]
+  },
+  {
+    question: "What’s the most underrated programming language?",
+    answers: ["Rust", "Holy C", "PHP", "TypeScript"]
+  },
+  {
+    question: "What’s the best password manager?",
+    answers: ["LastPass", "1Password", "Bitwarden", "Dashlane"]
+  }
 ]
