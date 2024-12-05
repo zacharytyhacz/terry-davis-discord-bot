@@ -94,6 +94,14 @@ client.on(Events.MessageCreate, message => {
    if (containsCIA(message.content)) {
        message.react('👀')
    }
+
+   if (message.author.id === '1032407444523077712') {
+     message.react('🇫🇷')
+   }
+
+   if (['193846431004622848', '314929056422297602'].includes(message.author.id)) {
+     message.react('🇦🇱')
+   }
 });
 
 client.login(token)
