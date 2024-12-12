@@ -1,6 +1,6 @@
 import { CronJob } from 'cron'
 import dotenv from 'dotenv-safe'
-import { Client, Events, IntentsBitField } from 'discord.js';
+import { Client, Events, IntentsBitField, MessageReaction, User } from 'discord.js';
 import { replies } from './messages/replies'
 import { engagementQuestions } from './messages/engagement'
 
@@ -63,6 +63,25 @@ Dont see your answer? Share with us!
                 for (const reaction of reactionEmojis) {
                     await message.react(reaction)
                 }
+
+                const filter = (reaction: MessageReaction, user: User) => {
+                  return !user.bot && reactionEmojis.includes(reaction.emoji.name || '');
+                }
+
+                const collector = message.createReactionCollector({ filter, time: 48 * 60 * 60 * 1000 }); // 48 hours
+                const reactingUsers: Set<string> = new Set();
+
+                collector.on('collect', async (reaction, user) => {
+                  if (!reactingUsers.has(user.id)) {
+                    reactingUsers.add(user.id);
+
+                    if (reactingUsers.size === 2) {
+                      const answerChosen = answers[reactionEmojis.indexOf(reaction.emoji.name as string)] ?? 'your answer'
+                      await channel.send(`Nice <@${user.id}>! Can you share why you chose ${answerChosen}?`);
+                      collector.stop()
+                    }
+                  }
+                });
             } else {
                 console.log('Channel not found or the bot does not have access to it.');
             }
