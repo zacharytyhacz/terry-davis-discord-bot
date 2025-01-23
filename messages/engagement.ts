@@ -1,9 +1,5 @@
 export const engagementQuestions = [
   {
-    question: "What's the best programming language for beginners?",
-    answers: ["Python", "JavaScript", "C#", "Ruby"]
-  },
-  {
     question: "Which text editor do you prefer?",
     answers: ["VS Code", "Sublime Text", "Vim", "Notepad++"]
   },
@@ -20,76 +16,16 @@ export const engagementQuestions = [
     answers: ["Object-Oriented", "Functional", "Procedural", "Declarative"]
   },
   {
-    question: "Which do you prefer for backend development?",
-    answers: ["Node.js", "Django", "Laravel", "Spring Boot"]
-  },
-  {
-    question: "What's your favorite frontend library?",
-    answers: ["React", "Vue", "Svelte", "Angular"]
-  },
-  {
-    question: "Which CSS framework is your go-to?",
-    answers: ["Bootstrap", "Tailwind", "Foundation", "Bulma"]
-  },
-  {
-    question: "What's the best source control platform?",
-    answers: ["GitHub", "GitLab", "Bitbucket", "Azure DevOps"]
-  },
-  {
     question: "What’s the most frustrating programming bug?",
     answers: ["Off-by-one errors", "Null pointer exceptions", "Memory leaks", "Concurrency issues"]
-  },
-  {
-    question: "What's your favorite web hosting provider?",
-    answers: ["AWS", "DigitalOcean", "Netlify", "Vercel"]
   },
   {
     question: "Which terminal emulator is the best?",
     answers: ["iTerm", "Terminator", "Alacritty", "Windows Terminal"]
   },
   {
-    question: "What’s the best tool for team communication?",
-    answers: ["Slack", "Discord", "Microsoft Teams", "Google Chat"]
-  },
-  {
-    question: "What's the most secure programming language?",
-    answers: ["Rust", "C#", "Go", "Python"]
-  },
-  {
-    question: "What's your favorite design tool?",
-    answers: ["Figma", "Adobe XD", "Sketch", "Canva"]
-  },
-  {
-    question: "Which deployment method do you prefer?",
-    answers: ["Containers", "Serverless", "Bare-metal servers", "Virtual machines"]
-  },
-  {
-    question: "What’s the most dreaded software?",
-    answers: ["JIRA", "SharePoint", "Lotus Notes", "Microsoft Access"]
-  },
-  {
     question: "What's the best tool for debugging?",
     answers: ["Chrome DevTools", "Postman", "PyCharm Debugger", "VS Code Debugger"]
-  },
-  {
-    question: "What’s your preferred shell?",
-    answers: ["Bash", "Zsh", "Fish", "PowerShell"]
-  },
-  {
-    question: "What’s the best type of monitor setup?",
-    answers: ["Single Ultrawide", "Dual Monitors", "Triple Monitors", "Laptop Screen Only"]
-  },
-  {
-    question: "What's the most important part of cybersecurity?",
-    answers: ["Password management", "Encryption", "Patch management", "User education"]
-  },
-  {
-    question: "What’s your favorite CI/CD tool?",
-    answers: ["GitHub Actions", "Jenkins", "GitLab CI", "CircleCI"]
-  },
-  {
-    question: "Which operating system do you prefer for coding?",
-    answers: ["Linux", "macOS", "Windows", "BSD"]
   },
   {
     question: "What’s your preferred method of learning new skills?",
@@ -100,10 +36,6 @@ export const engagementQuestions = [
     answers: ["Unit Testing", "Integration Testing", "End-to-End Testing", "Manual Testing"]
   },
   {
-    question: "What’s your favorite cloud provider?",
-    answers: ["AWS", "Azure", "Google Cloud", "Linode"]
-  },
-  {
     question: "What’s the hardest part of web development?",
     answers: ["Accessibility", "Performance", "Responsive Design", "Cross-Browser Compatibility"]
   },
@@ -112,7 +44,39 @@ export const engagementQuestions = [
     answers: ["Rust", "Holy C", "PHP", "TypeScript"]
   },
   {
-    question: "What’s the best password manager?",
-    answers: ["LastPass", "1Password", "Bitwarden", "Dashlane"]
-  }
+    question: "What's your favorite part of our meetup group?",
+    answers: ["Learning new things", "Meeting new people", "The pizza and beer", "Having a good time"]
+  },
+  {
+    question: "Where do you usually work?",
+    answers: ["From home", "Coworking Space", "Home and Office", "I switch it up"]
+  },
+  {
+    question: "How do you like your coffee?",
+    answers: ["Black", "With cream", "With everything", "I don't drink coffee"]
+  },
+  {
+    question: "How do you take notes about your projects?",
+    answers: ["On paper/notebook", "Notion / Obisian", "Textfile", "All in my head!"]
+  },
+  {
+    question: "Best music to code to?",
+    answers: ["Lo-fi", "Metal", "Classical", "Silence"]
+  },
+  {
+    question: "Best music to code to?",
+    answers: ["Lo-fi", "Metal", "Classical", "Silence"]
+  },
+  {
+    question: "What time of day is most productive for you?",
+    answers: ["Early morning, before 9am", "Morning", "Afternoon", "Late night"]
+  },
+  {
+    question: "What does your battle station look like?",
+    answers: ["Clean and minimal", "Pens, pencils, papers, notes, and drawings", "Messy with stuff everywhere", "Plants, plants, and more plants"]
+  },
+  {
+    question: "Favorite type of meetup event?",
+    answers: ["Social hanging out", "Educational, workshop, learning", "Hackathon / Building", "Discussions and debates"]
+  },
 ]
