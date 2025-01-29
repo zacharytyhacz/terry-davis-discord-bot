@@ -4,7 +4,7 @@
   "description": "",
   "main": "bot.ts",
   "scripts": {
-    "start": "ts-node bot.ts"
+    "start": "tsx bot.ts"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +15,9 @@
     "cron": "^3.1.6",
     "discord.js": "^14.14.1",
     "dotenv-safe": "^8.2.0",
-    "ts-node": "^10.9.2",
     "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
   }
 }
