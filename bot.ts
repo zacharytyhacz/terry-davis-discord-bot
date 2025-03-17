@@ -51,7 +51,7 @@ client.once(Events.ClientReady, async () => {
                 console.log('Channel found. Sending message...')
                 const { question, answers } = engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]
                 const message = await channel.send(`
-Hey guys!
+Hey nerds
 
 ${question}
 

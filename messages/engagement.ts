@@ -1,75 +1,43 @@
 export const engagementQuestions = [
   {
-    question: "Which text editor do you prefer?",
-    answers: ["VS Code", "Sublime Text", "Vim", "Notepad++"]
+    question: "Which LLM is your coding buddy?",
+    answers: ["ChatGPT", "Github Copilot", "Claude", "Gemini"]
   },
   {
-    question: "What's the best Linux distro for development?",
-    answers: ["Ubuntu", "Fedora", "Arch", "Debian"]
+    question: "What is the most meme language today",
+    answers: ["PHP", "Assembly", "JavaScript", "Perl"]
   },
   {
-    question: "What’s the best database?",
-    answers: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"]
+    question: "whats your favorite git commit message",
+    answers: ["fixes", "wip", "changes", "updates"]
   },
   {
-    question: "What’s the worst programming paradigm?",
-    answers: ["Object-Oriented", "Functional", "Procedural", "Declarative"]
+    question: "Favorite game engine?",
+    answers: ["Unreal Engine", "Unity", "Godot", "Pygame"]
   },
   {
-    question: "What’s the most frustrating programming bug?",
-    answers: ["Off-by-one errors", "Null pointer exceptions", "Memory leaks", "Concurrency issues"]
+    question: "What's the best excuse if your code causes production error?",
+    answers: ["thats weird...", "I cant test everything", "Must be something the user did", "I'll fix it in the next sprint"]
   },
   {
-    question: "Which terminal emulator is the best?",
-    answers: ["iTerm", "Terminator", "Alacritty", "Windows Terminal"]
+    question: "Which programming language do you want to learn next?",
+    answers: ["Rust", "Go", "C", "C++"]
   },
   {
-    question: "What's the best tool for debugging?",
-    answers: ["Chrome DevTools", "Postman", "PyCharm Debugger", "VS Code Debugger"]
+    question: "How do you like to declare colors?",
+    answers: ["Hex", "RGB", "HSL", "Pantone"]
   },
   {
-    question: "What’s your preferred method of learning new skills?",
-    answers: ["Documentation", "Online Courses", "Hands-on Projects", "Books"]
+    question: "You have no internet at all, what do you do?",
+    answers: ["Read offline documentation ( aka, books )", "Try to write code", "Take a break", "Cry"]
   },
   {
-    question: "What’s your favorite type of testing?",
-    answers: ["Unit Testing", "Integration Testing", "End-to-End Testing", "Manual Testing"]
+    question: "what is the best coffee shop or cafe to work out of?",
+    answers: ["Port City Java", "Drift", "Azalea Station", "Starbucks"]
   },
   {
-    question: "What’s the hardest part of web development?",
-    answers: ["Accessibility", "Performance", "Responsive Design", "Cross-Browser Compatibility"]
-  },
-  {
-    question: "What’s the most underrated programming language?",
-    answers: ["Rust", "Holy C", "PHP", "TypeScript"]
-  },
-  {
-    question: "What's your favorite part of our meetup group?",
-    answers: ["Learning new things", "Meeting new people", "The pizza and beer", "Having a good time"]
-  },
-  {
-    question: "Where do you usually work?",
-    answers: ["From home", "Coworking Space", "Home and Office", "I switch it up"]
-  },
-  {
-    question: "How do you like your coffee?",
-    answers: ["Black", "With cream", "With everything", "I don't drink coffee"]
-  },
-  {
-    question: "How do you take notes about your projects?",
-    answers: ["On paper/notebook", "Notion / Obisian", "Textfile", "All in my head!"]
-  },
-  {
-    question: "Best music to code to?",
-    answers: ["Lo-fi", "Metal", "Classical", "Silence"]
-  },
-  {
-    question: "Best music to code to?",
-    answers: ["Lo-fi", "Metal", "Classical", "Silence"]
-  },
-  {
-    question: "What time of day is most productive for you?",
-    answers: ["Early morning, before 9am", "Morning", "Afternoon", "Late night"]
+    question: "Favorite tech youtuber?",
+    answers: ["The Tech Lead", "Fireship.io", "Mental Outlaw", "Luke Smith"]
   },
   {
     question: "What does your battle station look like?",
