@@ -3,12 +3,13 @@ import dotenv from 'dotenv-safe'
 import { Client, Events, IntentsBitField, MessageReaction, User } from 'discord.js';
 import { replies } from './messages/replies'
 import { engagementQuestions } from './messages/engagement'
+import crypto from "crypto";
 
 dotenv.config({
     example: './.env.example'
 })
 
-const MAIN_CHANNEL_ID = "862860519900053533"
+const MAIN_CHANNEL_ID = "571704489413705764"
 
 const client = new Client({
     intents: [
@@ -19,6 +20,8 @@ const client = new Client({
 });
 
 const token = process.env.TOKEN;
+
+var lastEngagementIndices: number[] = [];
 
 function getRandomReply(): string {
     const randomIndex = Math.floor(Math.random() * replies.length);
@@ -41,7 +44,8 @@ client.once(Events.ClientReady, async () => {
     console.log('time now is:', new Date().toLocaleTimeString())
 
     new CronJob(
-        '0 29 18 * * 2,4,6', // Every Tuesday, Thursday, and Saturday at 6:29 PM CST
+        // '0 29 18 * * 2,4,6', // Every Tuesday, Thursday, and Saturday at 6:29 PM CST
+        '*/10 * * * * *',
         async () => {
             console.log('Running cronjob....')
             // Fetch the channel using the saved channel ID
@@ -49,7 +53,7 @@ client.once(Events.ClientReady, async () => {
             
             if (channel && channel.isTextBased()) {
                 console.log('Channel found. Sending message...')
-                const { question, answers } = engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]
+                const { question, answers } = engagementQuestions[getRandomEngagementIndex()]
                 const message = await channel.send(`
 Hey nerds
 
@@ -122,5 +126,20 @@ client.on(Events.MessageCreate, message => {
      message.react('🇦🇱')
    }
 });
+
+function getRandomEngagementIndex(): number {
+    if (lastEngagementIndices.length >= engagementQuestions.length) {
+        lastEngagementIndices = []
+    }
+    
+    let engagementIndex = crypto.randomInt(0, engagementQuestions.length);
+    while (lastEngagementIndices.includes(engagementIndex)) {
+      engagementIndex = crypto.randomInt(0, engagementQuestions.length);
+    }
+
+    lastEngagementIndices.push(engagementIndex)
+  
+    return engagementIndex;
+  }
 
 client.login(token)
