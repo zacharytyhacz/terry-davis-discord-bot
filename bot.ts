@@ -131,15 +131,15 @@ function getRandomEngagementIndex(): number {
     if (lastEngagementIndices.length >= engagementQuestions.length) {
         lastEngagementIndices = []
     }
-    
+
     let engagementIndex = crypto.randomInt(0, engagementQuestions.length);
     while (lastEngagementIndices.includes(engagementIndex)) {
-      engagementIndex = crypto.randomInt(0, engagementQuestions.length);
+        engagementIndex = crypto.randomInt(0, engagementQuestions.length);
     }
 
     lastEngagementIndices.push(engagementIndex)
-  
+
     return engagementIndex;
-  }
+}
 
 client.login(token)
