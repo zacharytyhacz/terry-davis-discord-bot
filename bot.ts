@@ -9,7 +9,7 @@ dotenv.config({
     example: './.env.example'
 })
 
-const MAIN_CHANNEL_ID = "571704489413705764"
+const MAIN_CHANNEL_ID = "862860519900053533"
 
 const client = new Client({
     intents: [
@@ -44,8 +44,7 @@ client.once(Events.ClientReady, async () => {
     console.log('time now is:', new Date().toLocaleTimeString())
 
     new CronJob(
-        // '0 29 18 * * 2,4,6', // Every Tuesday, Thursday, and Saturday at 6:29 PM CST
-        '*/10 * * * * *',
+        '0 29 18 * * 2,4,6', // Every Tuesday, Thursday, and Saturday at 6:29 PM CST
         async () => {
             console.log('Running cronjob....')
             // Fetch the channel using the saved channel ID
