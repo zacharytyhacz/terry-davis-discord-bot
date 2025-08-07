@@ -89,6 +89,24 @@ Dont see your answer? Share with us!
         null,
         true
     )
+
+    new CronJob(
+
+        // every sunday
+        '0 0 12 * * 0', // Every Sunday at 12:00 PM CST
+        async () => {
+          const channel = client.channels.cache.get(MAIN_CHANNEL_ID)
+          if (channel && channel.isTextBased() && 'send' in channel) {
+            await channel.send(`
+Hey friends, **the BEST way to support the meetup is to ATTEND our events** 😎
+
+If you WANT to support is other ways, please see our website: https://wilmingtonio.org/
+`)
+          }
+        },
+        null,
+        true
+    )
 });
 
 client.on(Events.Error, (err) => {
