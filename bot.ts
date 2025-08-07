@@ -3,6 +3,7 @@ import dotenv from 'dotenv-safe'
 import { Client, Events, IntentsBitField, MessageReaction, User } from 'discord.js';
 import { replies } from './messages/replies'
 import { engagementQuestions } from './messages/engagement'
+import crypto from "crypto";
 
 dotenv.config({
     example: './.env.example'
@@ -19,6 +20,8 @@ const client = new Client({
 });
 
 const token = process.env.TOKEN;
+
+var lastEngagementIndices: number[] = [];
 
 function getRandomReply(): string {
     const randomIndex = Math.floor(Math.random() * replies.length);
@@ -49,7 +52,7 @@ client.once(Events.ClientReady, async () => {
             
             if (channel && channel.isTextBased()) {
                 console.log('Channel found. Sending message...')
-                const { question, answers } = engagementQuestions[Math.floor(Math.random() * engagementQuestions.length)]
+                const { question, answers } = engagementQuestions[getRandomEngagementIndex()]
                 const message = await channel.send(`
 Hey nerds
 
@@ -140,5 +143,20 @@ client.on(Events.MessageCreate, message => {
      message.react('🇦🇱')
    }
 });
+
+function getRandomEngagementIndex(): number {
+    if (lastEngagementIndices.length >= engagementQuestions.length) {
+        lastEngagementIndices = []
+    }
+
+    let engagementIndex = crypto.randomInt(0, engagementQuestions.length);
+    while (lastEngagementIndices.includes(engagementIndex)) {
+        engagementIndex = crypto.randomInt(0, engagementQuestions.length);
+    }
+
+    lastEngagementIndices.push(engagementIndex)
+
+    return engagementIndex;
+}
 
 client.login(token)
