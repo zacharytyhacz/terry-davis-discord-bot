@@ -1,264 +1,222 @@
 export const engagementQuestions = [
   {
-    question: "Which LLM is your coding buddy?",
-    answers: ["ChatGPT", "Github Copilot", "Claude", "Gemini"],
+    question: "Which JavaScript runtime do you prefer using in 2025?",
+    answers: ["Bun", "Node.js", "Deno", "Other"]
   },
   {
-    question: "What is the most meme language today",
-    answers: ["PHP", "Assembly", "JavaScript", "Perl"],
+    question: "Which frontend meta-framework are you currently enjoying the most?",
+    answers: ["Next.js", "SvelteKit", "Nuxt", "Remix"]
   },
   {
-    question: "whats your favorite git commit message",
-    answers: ["fixes", "wip", "changes", "updates"],
+    question: "What's your preferred way to manage state in React apps?",
+    answers: ["Zustand", "Redux Toolkit", "React Context", "Jotai"]
   },
   {
-    question: "Favorite game engine?",
-    answers: ["Unreal Engine", "Unity", "Godot", "Pygame"],
+    question: "Which CSS styling method do you use most often?",
+    answers: ["Tailwind CSS", "CSS Modules", "Styled Components", "Vanilla CSS"]
   },
   {
-    question: "What's the best excuse if your code causes production error?",
-    answers: [
-      "thats weird...",
-      "I cant test everything",
-      "Must be something the user did",
-      "I'll fix it in the next sprint",
-    ],
+    question: "What's your go-to deployment platform for personal projects?",
+    answers: ["Vercel", "Render", "Netlify", "Self-hosted VPS"]
   },
   {
-    question: "Which programming language do you want to learn next?",
-    answers: ["Rust", "Go", "C", "C++"],
+    question: "Which LLM model do you use or trust most for code?",
+    answers: ["GPT-4o (OpenAI)", "Claude 3.5 (Anthropic)", "Gemini 1.5 (Google)", "Code LLaMA 2 (Meta)"]
   },
   {
-    question: "How do you like to declare colors?",
-    answers: ["Hex", "RGB", "HSL", "Pantone"],
+    question: "How do you prefer writing backend logic in full-stack apps?",
+    answers: ["Server Actions", "API Routes (REST)", "GraphQL", "TRPC"]
   },
   {
-    question: "You have no internet at all, what do you do?",
-    answers: [
-      "Read offline documentation ( aka, books )",
-      "Try to write code",
-      "Take a break",
-      "Cry",
-    ],
+    question: "Which database stack are you using most in 2025?",
+    answers: ["PostgreSQL + Prisma", "MongoDB + Mongoose", "Supabase", "SQLite"]
   },
   {
-    question: "what is the best coffee shop or cafe to work out of?",
-    answers: ["Port City Java", "Drift", "Azalea Station", "Starbucks"],
+    question: "What's your preferred package manager for JS/TS projects?",
+    answers: ["pnpm", "npm", "yarn", "bun install"]
   },
   {
-    question: "Favorite tech youtuber?",
-    answers: ["The Tech Lead", "Fireship.io", "Mental Outlaw", "Luke Smith"],
+    question: "Which game engine do you enjoy or experiment with most?",
+    answers: ["Godot", "Unity", "Unreal Engine", "Custom / Other"]
   },
   {
-    question: "What does your battle station look like?",
-    answers: [
-      "Clean and minimal",
-      "Pens, pencils, papers, notes, and drawings",
-      "Messy with stuff everywhere",
-      "Plants, plants, and more plants",
-    ],
+    question: "When you start a new UI project, which component system do you reach for?",
+    answers: ["shadcn/ui", "Chakra UI", "Radix UI", "Custom components"]
   },
   {
-    question: "Favorite type of meetup event?",
-    answers: [
-      "Social hanging out",
-      "Educational, workshop, learning",
-      "Hackathon / Building",
-      "Discussions and debates",
-    ],
+    question: "Where do you host your production databases?",
+    answers: ["Supabase", "Railway", "PlanetScale", "Cloud VM / Bare Metal"]
   },
   {
-    question: "What's your preferred way to handle auth?",
-    answers: [
-      "HTTP Basic Auth",
-      "Clerk / Other SaaS",
-      "Zitadel / Self-Host Solution",
-      "Roll your own",
-    ],
+    question: "Which authentication method do you like best in apps?",
+    answers: ["Magic links", "OAuth (Google/GitHub/etc.)", "Username & Password", "Passkeys"]
   },
   {
-    question: "What's your favorite database?",
-    answers: ["Postgres", "MongoDB", "Sqlite", ".txt files"],
+    question: "Where do you discover new npm packages or libraries?",
+    answers: ["Twitter/X", "GitHub", "Hacker News", "YouTube/TikTok"]
   },
   {
-    question: "What's your daily driver operating system?",
-    answers: ["Windows", "macOS", "Linux", "TempleOS"],
+    question: "How do you prefer writing your backend in TypeScript?",
+    answers: ["Next.js API Routes", "Express.js", "NestJS", "tRPC"]
   },
   {
-    question: "Who's the greatest programmer who ever lived?",
-    answers: [
-      "Linus Torvalds",
-      "Dennis Ritchie",
-      "Richard Stallman",
-      "Terry A. Davis",
-    ],
+    question: "What’s your go-to tool for database migrations?",
+    answers: ["Prisma Migrate", "Drizzle Kit", "Knex.js", "Manual SQL"]
   },
   {
-    question: "Favorite web server?",
-    answers: ["Nginx", "Apache", "Caddy", "Microsoft IIS"],
+    question: "Which AI feature excites you most in dev tools?",
+    answers: ["Autocomplete / Copilot", "Chat-style debugging", "Automated tests", "AI UI design"]
   },
   {
-    question: "What was your first programming language?",
-    answers: ["Javascript", "C", "Python", "Java"],
+    question: "How do you prefer structuring your projects?",
+    answers: ["Monorepo (turborepo, etc.)", "Multiple repos", "Single folder app", "Doesn't matter"]
   },
   {
-    question: "What kind of pet(s) do you have?",
-    answers: ["Dog", "Cat", "Fish", "All of them"],
+    question: "When it comes to writing code, what’s most important to you?",
+    answers: ["Speed", "Readability", "Type safety", "Reusability"]
   },
   {
-    question: "Which fun activity would you rather do on the weekend.",
-    answers: [
-      "Video Games!",
-      "Go outside",
-      "Code and cry",
-      "Be with friends/family",
-    ],
-  },
-  // Chat gippity made the following ones (with some edits by npgy)
-  {
-    question: "What's your go-to debugging method?",
-    answers: [
-      "Manual printing/logging",
-      "Attached debugger",
-      "Ask AI",
-      "I don't debug, my code always works the first time",
-    ],
+    question: "What's your dream dev setup in 2025?",
+    answers: ["MacBook + VSC + AI", "Linux desktop + Neovim", "Cloud IDE + Copilot", "iPad + SSH + AI"]
   },
   {
-    question: "Which editor do you swear by?",
-    answers: ["VS Code", "Vim", "Emacs", "JetBrains IDEs"],
+    question: "What's your favorite way to handle forms in React?",
+    answers: ["react-hook-form", "Formik", "Uncontrolled inputs", "Zod with custom hooks"]
   },
   {
-    question: "What's your take on tabs vs spaces?",
-    answers: ["Tabs", "Spaces", "Whatever my team uses", "I don't indent"],
+    question: "Which hosting platform do you trust the most for production apps?",
+    answers: ["Vercel", "Fly.io", "AWS", "Render"]
   },
   {
-    question: "Which tech buzzword annoys you most?",
-    answers: ["Web3", "AI-powered", "Blockchain", "SaaS"],
+    question: "What's your preferred format for learning new tools?",
+    answers: ["YouTube tutorials", "Docs + examples", "Blog posts", "Interactive playgrounds"]
   },
   {
-    question: "What do you listen to while coding?",
-    answers: ["Lo-fi", "Metal", "Video game soundtracks", "Silence"],
+    question: "Which AI tool has helped you most in your dev workflow?",
+    answers: ["GitHub Copilot", "ChatGPT", "Cursor IDE", "Claude"]
   },
   {
-    question: "What's your dream dev job?",
-    answers: [
-      "Open source full time",
-      "Indie hacker building cool stuff",
-      "Big tech salary mode",
-      "Remote in the mountains",
-    ],
+    question: "What kind of side project are you most excited about building?",
+    answers: ["SaaS / tools", "Games", "AI-powered apps", "Community platforms"]
   },
   {
-    question: "What’s your stance on semicolons in JS?",
-    answers: [
-      "Always",
-      "Never",
-      "ASL (Automatic Semicolon Lottery)",
-      "¯\\_(ツ)_/¯",
-    ],
+    question: "Which type system philosophy do you prefer in TypeScript?",
+    answers: ["Strict + explicit", "Flexible + inferred", "Hybrid", "Loosest possible"]
   },
   {
-    question: "What’s the best way to learn programming?",
-    answers: [
-      "Build stuff",
-      "Courses & tutorials",
-      "Reading docs",
-      "Shadow someone / Get a mentor",
-    ],
+    question: "How do you usually manage environment variables?",
+    answers: [".env files", "Secrets manager (e.g. Vercel)", "Hardcoded in dev, env in prod", "dotenv-expand + tsconfig"]
   },
   {
-    question: "You find a 10-year-old legacy system. First thought?",
-    answers: ["Burn it", "Refactor it", "Understand it", "Pray to Terry"],
+    question: "What's your preferred way to write tests?",
+    answers: ["Unit tests only", "E2E + integration", "No tests", "Rely on TypeScript + manual QA"]
   },
   {
-    question: "What's your favorite kind of side project?",
-    answers: [
-      "Something that scratches an itch",
-      "Useless but fun",
-      "Startup idea maybe?",
-      "Rebuilding a tool from scratch",
-    ],
+    question: "What kind of AI integrations are you most interested in adding to apps?",
+    answers: ["Chat assistants", "Recommendation engines", "AI-generated content", "Code helpers"]
   },
   {
-    question: "What's your preferred backend language?",
-    answers: ["JS/TS", "Python", "Go", "Java"],
+    question: "What do you look for most in an npm package?",
+    answers: ["Good docs", "Type support", "Popularity", "Tree-shaking / small bundle"]
   },
   {
-    question: "Frontend framework of choice?",
-    answers: ["React", "Vue", "Svelte", "Angular"],
+    question: "Which database ORM or toolkit do you prefer?",
+    answers: ["Prisma", "Drizzle ORM", "TypeORM", "Raw SQL"]
   },
   {
-    question: "Best way to handle state management?",
-    answers: ["Redux", "Zustand", "Manually", "I’m in a constant state of pain"],
+    question: "Where do you usually keep your project docs?",
+    answers: ["README.md", "Notion or docs site", "Inline comments", "Nowhere yet 😅"]
   },
   {
-    question: "What’s your unit test philosophy?",
-    answers: [
-      "100% coverage or bust",
-      "Only critical paths",
-      "Tests are for cowards",
-      "I write tests after bugs appear",
-    ],
+    question: "What's your go-to AI prompt style?",
+    answers: ["Long, detailed prompt", "Short + iterate", "Copy/paste code and ask", "I just talk to it casually"]
   },
   {
-    question: "How do you feel about TypeScript?",
-    answers: ["Love it", "Hate it", "Still learning", "Use it, but complain"],
+    question: "How do you handle app metrics and monitoring?",
+    answers: ["Plausible / PostHog", "Custom logs + dashboards", "Sentry / Datadog", "I don’t (yet)"]
   },
   {
-    question: "What's your favorite emoji to use in commit messages?",
-    answers: ["🔥", "🚀", "🐛", "🧹"],
+    question: "How do you prefer to deploy game projects?",
+    answers: ["Itch.io", "Steam", "Browser via WebGL", "Side-load / APK / installer"]
   },
   {
-    question: "Pick a build tool:",
-    answers: ["Vite", "Webpack", "Babel", "Build tool? I just write raw HTML bro"],
+    question: "What’s your go-to productivity boost during dev work?",
+    answers: ["Lo-fi music / playlists", "Caffeine", "Silence + focus", "Changing work location"]
   },
   {
-    question: "Where do you host your personal projects?",
-    answers: ["Vercel", "Netlify", "AWS", "My own server"],
+    question: "What’s your top priority when choosing a stack?",
+    answers: ["Speed to build", "Performance", "Familiarity", "Scalability"]
   },
   {
-    question: "How do you keep up with tech news?",
-    answers: ["Twitter / X", "Reddit", "Discord", "I don't"],
+    question: "Which feature in an AI code tool do you wish was better?",
+    answers: ["Code explanation", "Bug fixing", "Test generation", "Understanding context"]
   },
   {
-    question: "What’s your dream hardware setup?",
-    answers: ["MacBook Pro", "Desktop PC", "ThinkPad forever", "Anything with RGB"],
+    question: "What kind of games do you most want to build (or already build)?",
+    answers: ["2D pixel art", "3D first-person", "Narrative / visual novel", "Multiplayer web games"]
   },
   {
-    question: "What’s your code review style?",
-    answers: [
-      "Nitpick everything",
-      "LGTM, merge it",
-      "Comment once, then ghost",
-      "Write a novel",
-    ],
+    question: "Which part of app development do you enjoy *least*?",
+    answers: ["Authentication setup", "State management", "Testing", "Deployment"]
   },
   {
-    question: "How do you feel about writing CSS?",
-    answers: [
-      "Love it, it's an art",
-      "Tailwind or nothing",
-      "Why won’t it just center?!",
-      "I just use batteries-included libraries",
-    ],
+    question: "What’s your go-to 2FA (Two-Factor Auth) method for dev tools and services?",
+    answers: ["Authenticator app", "Text message (SMS)", "Hardware key (YubiKey)", "I don’t use 2FA"]
   },
   {
-    question: "What’s your monitor setup?",
-    answers: [
-      "Single ultrawide",
-      "Dual monitors",
-      "Triple monitor beast",
-      "Just my laptop screen",
-    ],
+    question: "How do you usually handle secret keys in development?",
+    answers: ["Dotenv files", "Environment manager (e.g. Doppler)", "Hardcoded for local only", "Cloud secret manager"]
   },
   {
-    question: "How do you feel when code compiles on first try?",
-    answers: [
-      "Suspicious...",
-      "I'm a genius",
-      "Time to break something else",
-      "It never happens",
-    ],
+    question: "What’s your biggest concern with app security today?",
+    answers: ["Credential leaks", "Insecure 3rd-party packages", "Social engineering", "API misconfigurations"]
   },
+  {
+    question: "Do you actively check your dependencies for known vulnerabilities?",
+    answers: ["Yes, regularly", "Sometimes", "Only in prod", "Nope"]
+  },
+  {
+    question: "Which security practice do you think is *most overlooked* by indie devs?",
+    answers: ["Rate-limiting and throttling", "Secrets management", "CORS configuration", "Input validation"]
+  },
+  {
+    question: "Where do you usually work from in Wilmington?",
+    answers: ["Coworx / Cargo District", "Remote at home", "Coffee shops", "Office / coworking"]
+  },
+  {
+    question: "What kind of local tech events are you most interested in attending?",
+    answers: ["Hackathons", "Panel talks / Q&A", "Coworking meetups", "Game dev or creative coding jams"]
+  },
+  {
+    question: "Which Wilmington neighborhood has the most 'tech energy' right now?",
+    answers: ["Cargo District", "Downtown", "Ogden / Porters Neck", "Midtown"]
+  },
+  {
+    question: "What day/time is best for local tech meetups?",
+    answers: ["Weekday evenings", "Saturday mornings", "Friday afternoons", "Sunday social brunch"]
+  },
+  {
+    question: "Would you rather go to a local event with...",
+    answers: ["Free food + open coworking", "Live tech demos", "Speed networking", "Panels with senior devs"]
+  },
+  {
+    question: "How often do you go to tech conferences or dev meetups?",
+    answers: ["A few times a year", "Just 1 or 2", "Only virtual ones", "Never"]
+  },
+  {
+    question: "What’s most important to you when choosing a conference to attend?",
+    answers: ["Networking / people", "Talk topics", "Location / travel", "Sponsor swag & food"]
+  },
+  {
+    question: "Which type of tech talks do you *actually enjoy* most?",
+    answers: ["Live coding sessions", "Startup founder stories", "Career journeys / dev life", "Deep dives into architecture"]
+  },
+  {
+    question: "Where would you most want to attend a dev conference in 2025/2026?",
+    answers: ["Austin, TX", "NYC", "Somewhere beachy", "Just do it locally"]
+  },
+  {
+    question: "If there was a Wilmington Tech Weekend, what would make it great?",
+    answers: ["Hackathon + prizes", "Food trucks + panels", "Vendor booths + startups", "Workshops + coworking time"]
+  }
 ];
